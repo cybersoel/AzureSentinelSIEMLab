@@ -54,7 +54,9 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 
 
 
-3
+- We will name the virtual machine "honeypot-vm"
+- Choose your region ("US East" in my case)
+- Choose ISO (Select the most recent Windows server)
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/xwJoMOT.png">
@@ -67,7 +69,8 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 
 
 
-4
+- Keep the size at the default setting (2 vCPUs, 8 GiB memory).
+- Create an admin account for this VM (in this lab, username: soeladmin, password: Cyberlab!123)
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/NLPUrkH.png">
@@ -78,7 +81,8 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 
 
 
-5
+- For the Network Interface option, create a new virtual network named “honeypot-vm-vnet” and use the default settings. Choose the default subnet with the range 10.0.0.0/24. Name the new Public IP “honeypot-vm-ip.”
+- Select [Advanced] for the NIC network security group, and create a new network security group called “honeypot-vm-nsg.”
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/9cUJ96u.png">
@@ -88,7 +92,15 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 <br />
 
 
-6
+- We can add a firewall rule for this network security group. To do so, delete the default inbound rule and create a new one.
+Click Add an inbound rule. Configure like below:
+    - Source: Any
+    - Source port ranges: * (asterisk means any port)
+    - Destination: Any
+    - Destination port ranges: *
+    - Action: Allow
+    - Priority: 100 (lower numbers have higher priority)
+    - Name: You can choose any name, but for this lab, we’ll use “EXPOSED_ANY_IN”
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/5EGqz6r.png">
@@ -97,8 +109,16 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 <br />
 <br />
 
+- This configuration is intended to make the virtual machine highly visible and attractive to potential interactions, ensuring that no traffic is dropped (including TCP ping, SYN scans, ICMP ping, etc.).
 
-7
+<br />
+<br />
+<br />
+<br />
+
+
+
+- After completing the network settings, proceed to the review section and create the VM.
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/uDEovSk.png">
