@@ -109,7 +109,7 @@ Click Add an inbound rule. Configure like below:
 <br />
 <br />
 
-- This configuration is intended to make the virtual machine highly visible and attractive to potential interactions, ensuring that no traffic is dropped (including TCP ping, SYN scans, ICMP ping, etc.).
+*This configuration is intended to make the virtual machine highly visible and attractive to potential interactions, ensuring that no traffic is dropped (including TCP ping, SYN scans, ICMP ping, etc.).*
 
 <br />
 <br />
