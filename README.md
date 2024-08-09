@@ -33,8 +33,16 @@
 
 
 ---
+## Creating a new resource group and the Honey Pot VM via Azure Portal
 
-2
+<br />
+
+Browse to the Microsoft Azure Portal and sign up for a free trial. After logging in, navigate to the [Virtual Machine] service.
+
+<br />
+<br />
+
+- Under the [Resource Group] drop-down menu, click [Create New]. Create a new resource group named “HoneypotLab.”
 
 <p align="center">
 <br/>
