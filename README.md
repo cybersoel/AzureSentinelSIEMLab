@@ -127,7 +127,8 @@ Click Add an inbound rule. Configure like below:
 <br />
 <br />
 
-
+---
+## Creating Log Analytics Workspace
 
 8
 <p align="center">
