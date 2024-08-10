@@ -406,7 +406,7 @@ ping x.x.x.x -t
 
 
 
-25
+ - Open [Windows Defender Firewall] on your VM.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/117p943.png">
@@ -416,7 +416,9 @@ ping x.x.x.x -t
 <br />
 
 
-26
+ - Click [Windows Defender Firewall Properties].
+ - Click [Windows Defender Firewall Properties].
+Change the [Firewall State] to [OFF]. Apply this to Domain, Public, and Private profiles. Click [Apply] > [OK]
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/SpVx1hm.png">
@@ -426,18 +428,32 @@ ping x.x.x.x -t
 <br />
 
 
-27
+ - Return to the Command Prompt on your desktop. Ping the VM again:
+
+'''
+ping x.x.x.x -t
+'''
+
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/oSAUgGH.png">
 <br />
+
+ - You should now see successful ping responses.
+
+<br />
 <br />
 <br />
 <br />
 
+---
+## Automation: PowerShell script: Custom Security Log Exporter
 
+<br />
+<br />
+<br />
 
-28
+ - Open the PowerShell script from Windows PowerShell ISE (admin)
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/Sm44YT6.png">
