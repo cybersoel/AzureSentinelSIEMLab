@@ -33,7 +33,7 @@
 
 
 ---
-## Creating a new resource group and the Honey Pot VM via Azure Portal
+## Honey Pot VM Configuration (via Azure Portal)
 
 <br />
 
