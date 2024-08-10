@@ -268,7 +268,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 ## Running the VM via RDP
 
 
-17
+ - Open [Remote Desktop Connection] on your host machine. Then, go to the Azure portal, navigate to [Virtual Machine], and select “honeypot-vm.” Copy the VM’s Public IP Address and paste it into Remote Desktop Connection on your host computer, then click [Connect].
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/9yY9YDN.png">
