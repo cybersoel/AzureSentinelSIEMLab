@@ -21,7 +21,7 @@
 **Table of Contents:**
 - [Honey Pot VM Configuration (via Azure Portal)](#honey-pot-vm-configuration-via-azure-portal)
 - [Creating Log Analytics Workspace](#creating-log-analytics-workspace)
-- [Setting up Microsoft Defender for Cloud](setting-up-microsoft-defender-for-cloud#)
+- [Setting up Microsoft Defender for Cloud](#setting-up-microsoft-defender-for-cloud)
 - [VM and Log Analytics integration](#vm-and-log-analytics-integration)
 - [Log Analytics and Microsoft Sentinel (SIEM) integration](#log-analytics-and-microsoft-sentinel-siem-integration)
 - [Running the VM via RDP](#running-the-vm-via-rdp)
