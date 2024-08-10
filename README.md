@@ -93,7 +93,7 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 
 
  - We can add a firewall rule for this network security group. To do so, delete the default inbound rule and create a new one.
-Click Add an inbound rule. Configure like below:
+Click [Add an inbound rule]. Configure like below:
     - Source: Any
     - Source port ranges: * (asterisk means any port)
     - Destination: Any
