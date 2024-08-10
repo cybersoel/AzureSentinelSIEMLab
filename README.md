@@ -47,7 +47,7 @@
 
 <br />
 
-Browse to the Microsoft Azure Portal and sign up for a free trial. After logging in, navigate to the [Virtual Machine] service.
+Browse to the Microsoft Azure Portal and sign up for a free trial. After logging in, navigate to the [Virtual Machine] service. Create a new virtual machine.
 
 <br />
 <br />
