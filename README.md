@@ -138,6 +138,8 @@ Click [Add an inbound rule]. Configure like below:
 <br />
 
 ---
+
+[back to top](#toc)
 ## Creating Log Analytics Workspace
 
 <br />
@@ -169,6 +171,8 @@ Return to the Azure portal main page and select the [Log Analytics Workspace] se
 <br />
 
 ---
+
+[back to top](#toc)
 ## Setting up Microsoft Defender for Cloud
 
 <br />
@@ -212,6 +216,8 @@ click [Save]
 <br />
 
 ---
+
+[back to top](#toc)
 ## VM and Log Analytics integration
 
 <br />
@@ -243,6 +249,8 @@ Now we’ll connect the Log Analytics workspace to our VM.
 <br />
 
 ---
+
+[back to top](#toc)
 ## Log Analytics and Microsoft Sentinel (SIEM) integration
 
 <br />
@@ -275,6 +283,8 @@ Now we’ll connect the Log Analytics workspace to our VM.
 <br />
 
 ---
+
+[back to top](#toc)
 ## Running the VM via RDP
 
 
@@ -310,6 +320,8 @@ Now we’ll connect the Log Analytics workspace to our VM.
 <br />
 
 ---
+
+[back to top](#toc)
 ## Windows Event Viewer and Logon Failure
 
 <br />
@@ -380,6 +392,8 @@ We'll now use these IP addresses to:
 <br />
 
 ---
+
+[back to top](#toc)
 ## Configuring VM for Network Exposure
 
 <br />
@@ -456,6 +470,8 @@ ping x.x.x.x -t
 <br />
 
 ---
+
+[back to top](#toc)
 ## Automation: PowerShell script: Custom Security Log Exporter
 
 <br />
