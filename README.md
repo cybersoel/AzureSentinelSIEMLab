@@ -417,7 +417,6 @@ ping x.x.x.x -t
 
 
  - Click [Windows Defender Firewall Properties].
- - Click [Windows Defender Firewall Properties].
 Change the [Firewall State] to [OFF]. Apply this to Domain, Public, and Private profiles. Click [Apply] > [OK]
 <p align="center">
 <br/>
@@ -430,9 +429,9 @@ Change the [Firewall State] to [OFF]. Apply this to Domain, Public, and Private 
 
  - Return to the Command Prompt on your desktop. Ping the VM again:
 
-'''
+```
 ping x.x.x.x -t
-'''
+```
 
 <p align="center">
 <br/>
