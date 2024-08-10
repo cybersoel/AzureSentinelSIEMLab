@@ -19,8 +19,8 @@
 ---
 <a name="toc"></a>
 **Table of Contents:**
+- [Honey Pot VM Configuration (via Azure Portal)](#honey-pot-vm-configuration-via-azure-portal)
 
-- 
 
 ---
 
@@ -33,6 +33,8 @@
 
 
 ---
+
+[back to top](#toc)
 ## Honey Pot VM Configuration (via Azure Portal)
 
 <br />
