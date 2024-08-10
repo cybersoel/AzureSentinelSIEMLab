@@ -346,32 +346,42 @@ You can double-click the event to see the detail:
 
  - From the previous example, you saw that when attackers try to access our VM, their IP addresses are recorded in the Windows event log, viewable in the Event Viewer.
 We'll now use these IP addresses to:
+
+<br />
+
     - Retrieve geographic information (latitude, longitude, city, state, and country) using PowerShell and a third-party API (ipgeolocation.io).
     - Create a custom log with this geographic data on our VM.
     - Send these custom logs to the Azure Log Analytics workspace.
     - Use Azure Sentinel (SIEM) to ingest the logs and plot the attackers' locations on a map.
+
+<br />
+
  - This process allows us to visualize the geographic origin of attempted intrusions.
 
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/SUmUxE0.png">
 <br />
-<br />
-<br />
-<br />
+
  
- *Example from ipgeolocation.io*
+ - *Example from ipgeolocation.io*
+
+<br />
+<br />
+<br />
 
 ---
 ## Configuring VM for Network Exposure
 
+<br />
+<br />
 
  - We'll disable the firewall on our VM to make it responsive to ICMP echo requests, increasing its visibility on the Internet.
- - visibility on the Internet.
-On your host machine (not the VM), open Command Prompt.
-Start a continuous ping to your VM:
+ - On your host machine (not the VM), open Command Prompt. Start a continuous ping to your VM:
+
 ```ping x.x.x.x -t```
-*(Replace x.x.x.x with your VM's IP address. The -t flag enables continuous pinging.)*
+
+ - *(Replace x.x.x.x with your VM's IP address. The -t flag enables continuous pinging.)*
 
 <p align="center">
 <br/>
@@ -380,7 +390,7 @@ Start a continuous ping to your VM:
 <br />
 
  - You'll see 'Request timed out' messages.
- - Next, we'll disable the VM's firewall. While we could allow ICMP traffic specifically, we'll turn off the entire firewall for this honeypot setup.
+ - We need to disable the VM's firewall. While we could allow ICMP traffic specifically, we'll turn off the entire firewall for this honeypot setup.
     - *Note: Disabling the firewall increases security risks. Only do this in a controlled environment for specific testing purposes.*
 
  
