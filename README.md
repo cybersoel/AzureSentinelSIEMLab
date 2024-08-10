@@ -46,7 +46,7 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/3A6MOv2.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/3A6MOv2.png">
 <br />
 <br />
 <br />
@@ -59,7 +59,7 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
  - Choose ISO (Select the most recent Windows server)
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/xwJoMOT.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/xwJoMOT.png">
 <br />
 <br />
 <br />
@@ -73,7 +73,7 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
  - Create an admin account for this VM (in this lab, username: soeladmin, password: Cyberlab!123)
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/NLPUrkH.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/NLPUrkH.png">
 <br />
 <br />
 <br />
@@ -85,7 +85,7 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
  - Select [Advanced] for the NIC network security group, and create a new network security group called “honeypot-vm-nsg.”
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/9cUJ96u.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/9cUJ96u.png">
 <br />
 <br />
 <br />
@@ -103,7 +103,7 @@ Click Add an inbound rule. Configure like below:
     - Name: You can choose any name, but for this lab, we’ll use “EXPOSED_ANY_IN”
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/5EGqz6r.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/5EGqz6r.png">
 <br />
 <br />
 <br />
@@ -121,7 +121,7 @@ Click Add an inbound rule. Configure like below:
  - After completing the network settings, proceed to the review section and create the VM.
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/uDEovSk.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/uDEovSk.png">
 <br />
 <br />
 <br />
@@ -142,7 +142,7 @@ Return to the Azure portal main page and select the [Log Analytics Workspace] se
  - Pick the region wherever you picked previously (EAST US in this lab)
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/4qRk5sy.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/4qRk5sy.png">
 <br />
 <br />
 <br />
@@ -152,7 +152,7 @@ Return to the Azure portal main page and select the [Log Analytics Workspace] se
  - Review and create!
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/5H6SQMy.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/5H6SQMy.png">
 <br />
 <br />
 <br />
@@ -173,7 +173,7 @@ Next, we’ll enable log collection from the virtual machine into the Log Analyt
  - Navigate to [Microsoft Defender for Cloud] > [Environment Settings], then select the “law-honeypot” workspace.
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/rlNzDcg.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/rlNzDcg.png">
 <br />
 <br />
 <br />
@@ -183,7 +183,7 @@ Next, we’ll enable log collection from the virtual machine into the Log Analyt
  - Disable SQL Servers since we won’t be using them. Enable the other options: [Foundational CSPM] and [Servers].
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/Awp0c1a.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/Awp0c1a.png">
 <br />
 <br />
 <br />
@@ -195,7 +195,7 @@ Next, we’ll enable log collection from the virtual machine into the Log Analyt
 Click on [Save]
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/561BAUr.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/561BAUr.png">
 <br />
 <br />
 <br />
@@ -216,7 +216,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
  -  Then, within the [Log Analytics workspace], navigate to [Virtual Machines] and choose “honeypot-vm.”
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/lWtMh6T.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/lWtMh6T.png">
 <br />
 <br />
 <br />
@@ -226,7 +226,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
  - Click on [Connect]
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/j2UwHtS.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/j2UwHtS.png">
 <br />
 <br />
 <br />
@@ -244,7 +244,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
            - *Microsoft Sentinel will serve as our SIEM for visualizing the attack data.*
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/3W4vqmD.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/3W4vqmD.png">
 <br />
 <br />
 <br />
@@ -258,7 +258,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
  - Click on [Add]
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/FwePCmd.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/FwePCmd.png">
 <br />
 <br />
 <br />
@@ -271,7 +271,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 17
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/9yY9YDN.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/9yY9YDN.png">
 <br />
 <br />
 <br />
@@ -282,7 +282,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 18
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/ZalwypN.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/ZalwypN.png">
 <br />
 <br />
 <br />
@@ -293,7 +293,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 19
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/8PkX9Sa.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/8PkX9Sa.png">
 <br />
 <br />
 <br />
@@ -305,7 +305,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 20
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/BduPEjy.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/BduPEjy.png">
 <br />
 <br />
 <br />
@@ -316,7 +316,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 21
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/yxV6dLt.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/yxV6dLt.png">
 <br />
 <br />
 <br />
@@ -326,7 +326,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 22
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/Yl4AdyH.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/Yl4AdyH.png">
 <br />
 <br />
 <br />
@@ -337,7 +337,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 23
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/SUmUxE0.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/SUmUxE0.png">
 <br />
 <br />
 <br />
@@ -348,7 +348,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 24
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/9NePZMJ.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/9NePZMJ.png">
 <br />
 <br />
 <br />
@@ -360,7 +360,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 25
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/117p943.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/117p943.png">
 <br />
 <br />
 <br />
@@ -370,7 +370,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 26
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/SpVx1hm.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/SpVx1hm.png">
 <br />
 <br />
 <br />
@@ -380,7 +380,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 27
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/oSAUgGH.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/oSAUgGH.png">
 <br />
 <br />
 <br />
@@ -391,7 +391,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 28
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/Sm44YT6.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/Sm44YT6.png">
 <br />
 <br />
 <br />
@@ -402,7 +402,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 29
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/6H8KrTW.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/6H8KrTW.png">
 <br />
 <br />
 <br />
@@ -412,7 +412,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 30
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/CBYSoOR.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/CBYSoOR.png">
 <br />
 <br />
 <br />
@@ -425,7 +425,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 31
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/SJFFAiX.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/SJFFAiX.png">
 <br />
 <br />
 <br />
@@ -436,7 +436,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 32
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/bhHMHlE.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/bhHMHlE.png">
 <br />
 <br />
 <br />
@@ -446,7 +446,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 33
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/H6VGmUp.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/H6VGmUp.png">
 <br />
 <br />
 <br />
@@ -456,7 +456,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 34
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/44drQRG.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/44drQRG.png">
 <br />
 <br />
 <br />
@@ -466,7 +466,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 35
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/uFrcpi9.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/uFrcpi9.png">
 <br />
 <br />
 <br />
@@ -477,7 +477,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 36
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/3PoZXOU.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/3PoZXOU.png">
 <br />
 <br />
 <br />
@@ -488,7 +488,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 37
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/sX3O6Rv.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/sX3O6Rv.png">
 <br />
 <br />
 <br />
@@ -500,7 +500,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 38
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/RIZKG6W.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/RIZKG6W.png">
 <br />
 <br />
 <br />
@@ -511,7 +511,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 39
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/yNoCRj1.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/yNoCRj1.png">
 <br />
 <br />
 <br />
@@ -522,7 +522,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 40
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/408IaAj.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/408IaAj.png">
 <br />
 <br />
 <br />
@@ -533,7 +533,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 41
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/BarSrWg.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/BarSrWg.png">
 <br />
 <br />
 <br />
@@ -545,7 +545,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 42
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/YH6vFhk.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/YH6vFhk.png">
 <br />
 <br />
 <br />
@@ -557,7 +557,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 43
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/gxKSpKn.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/gxKSpKn.png">
 <br />
 <br />
 <br />
@@ -568,7 +568,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 44
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/njOcNNU.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/njOcNNU.png">
 <br />
 <br />
 <br />
@@ -580,7 +580,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 45
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/dm4peR2.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/dm4peR2.png">
 <br />
 <br />
 <br />
@@ -591,7 +591,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 46
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/ypjexuQ.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/ypjexuQ.png">
 <br />
 <br />
 <br />
@@ -603,7 +603,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 47
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/CAO3Dzu.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/CAO3Dzu.png">
 <br />
 <br />
 <br />
@@ -614,7 +614,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 48
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/PqA2yuN.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/PqA2yuN.png">
 <br />
 <br />
 <br />
@@ -626,7 +626,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 49
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/tQqcA7U.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/tQqcA7U.png">
 <br />
 <br />
 <br />
@@ -638,7 +638,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 50
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/ZNwh1OJ.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/ZNwh1OJ.png">
 <br />
 <br />
 <br />
@@ -650,7 +650,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 51
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/XlKcX1A.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/XlKcX1A.png">
 <br />
 <br />
 <br />
@@ -661,7 +661,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 52
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/Cfqdkaf.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/Cfqdkaf.png">
 <br />
 <br />
 <br />
@@ -672,7 +672,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 53
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/4JHmthk.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/4JHmthk.png">
 <br />
 <br />
 <br />
@@ -683,7 +683,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 54
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/J0pvZ3H.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/J0pvZ3H.png">
 <br />
 <br />
 <br />
@@ -693,7 +693,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 55
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/4wHB5i3.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/4wHB5i3.png">
 <br />
 <br />
 <br />
@@ -704,7 +704,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 56
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/EXJig5P.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/EXJig5P.png">
 <br />
 <br />
 <br />
@@ -714,7 +714,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 57
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/l7DWZPi.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/l7DWZPi.png">
 <br />
 <br />
 <br />
@@ -724,7 +724,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 58
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/OcRtJ01.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/OcRtJ01.png">
 <br />
 <br />
 <br />
@@ -735,7 +735,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 59
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/0d9kzPK.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/0d9kzPK.png">
 <br />
 <br />
 <br />
@@ -745,7 +745,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 60
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/obqAUFi.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/obqAUFi.png">
 <br />
 <br />
 <br />
@@ -756,7 +756,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 61
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/AaMTmB7.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/AaMTmB7.png">
 <br />
 <br />
 <br />
@@ -767,7 +767,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 62
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/PKrPZCp.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/PKrPZCp.png">
 <br />
 <br />
 <br />
@@ -778,7 +778,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 63
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/JmUbj1V.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/JmUbj1V.png">
 <br />
 <br />
 <br />
@@ -788,7 +788,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 64
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/Zg5ElR2.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/Zg5ElR2.png">
 <br />
 <br />
 <br />
@@ -799,7 +799,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 65
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/iDJPrdo.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/iDJPrdo.png">
 <br />
 <br />
 <br />
@@ -810,7 +810,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 66
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/t60dHRV.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/t60dHRV.png">
 <br />
 <br />
 <br />
@@ -820,7 +820,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 67
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/WYFf3E3.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/WYFf3E3.png">
 <br />
 <br />
 <br />
@@ -831,7 +831,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 68
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/Vqwbpr5.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/Vqwbpr5.png">
 <br />
 <br />
 <br />
@@ -841,7 +841,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 69
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/byxOXS6.png">
+<img width="672" alt="Portfolio" src="https://i.imgur.com/byxOXS6.png">
 <br />
 <br />
 <br />
