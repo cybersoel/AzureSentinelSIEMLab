@@ -20,7 +20,15 @@
 <a name="toc"></a>
 **Table of Contents:**
 - [Honey Pot VM Configuration (via Azure Portal)](#honey-pot-vm-configuration-via-azure-portal)
-
+- [Creating Log Analytics Workspace](#creating-log-analytics-workspace)
+- [Setting up Microsoft Defender for Cloud](setting-up-microsoft-defender-for-cloud#)
+- [VM and Log Analytics integration](#vm-and-log-analytics-integration)
+- [Log Analytics and Microsoft Sentinel (SIEM) integration](#log-analytics-and-microsoft-sentinel-siem)
+- [Running the VM via RDP](#running-the-vm-via-rdp)
+- [Windows Event Viewer and Logon Failure](#windows-event-viewer-and-logon-failure)
+- [Configuring VM for Network Exposure](#configuring-vm-for-network-exposure)
+- [Automation: PowerShell script: Custom Security Log Exporter](#automation-powershell-script-custom-security-log-exporter)
+- [](#)
 
 ---
 
@@ -204,7 +212,7 @@ click [Save]
 <br />
 
 ---
-## VM and Log Analytics intergration
+## VM and Log Analytics integration
 
 <br />
 Now we’ll connect the Log Analytics workspace to our VM.
