@@ -375,7 +375,12 @@ We'll now use these IP addresses to:
 <br />
 <br />
 
- - We'll disable the firewall on our VM to make it responsive to ICMP echo requests, increasing its visibility on the Internet.
+We'll disable the firewall on our VM to make it responsive to ICMP echo requests, increasing its visibility on the Internet.
+
+<br />
+<br />
+
+
  - On your host machine (not the VM), open Command Prompt. Start a continuous ping to your VM:
 
 ```
