@@ -241,7 +241,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 <br />
 
  - Navigate to [Microsoft Sentinel] and click on [Create Microsoft Sentinel]
-           - *Microsoft Sentinel will serve as our SIEM for visualizing the attack data.*
+    - *Microsoft Sentinel will serve as our SIEM for visualizing the attack data.*
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/3W4vqmD.png">
