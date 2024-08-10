@@ -131,7 +131,7 @@ Click Add an inbound rule. Configure like below:
 ## Creating Log Analytics Workspace
 
 <br />
-Return to the Azure portal main page and select the [Log Analytics Workspace] service. This service will be used to ingest logs from the virtual machine. Click on [Create]
+Return to the Azure portal main page and select the [Log Analytics Workspace] service. This service will be used to ingest logs from the virtual machine. click [Create]
 <br />
 <br />
 <br />
@@ -192,7 +192,7 @@ Next, we’ll enable log collection from the virtual machine into the Log Analyt
 
 
  - Navigate to [Settings] > [Data Collection] Pick [All Events]
-Click on [Save]
+click [Save]
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/561BAUr.png">
@@ -223,7 +223,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 <br />
 
 
- - Click on [Connect]
+ - click [Connect]
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/j2UwHtS.png">
@@ -240,7 +240,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 <br />
 <br />
 
- - Navigate to [Microsoft Sentinel] and click on [Create Microsoft Sentinel]
+ - Navigate to [Microsoft Sentinel] and click [Create Microsoft Sentinel]
     - *Microsoft Sentinel will serve as our SIEM for visualizing the attack data.*
 <p align="center">
 <br/>
@@ -255,7 +255,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 
 
  - Select our Log Analytics workspace "law-honeypot"
- - Click on [Add]
+ - click [Add]
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/FwePCmd.png">
