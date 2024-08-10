@@ -161,7 +161,7 @@ Return to the Azure portal main page and select the [Log Analytics Workspace] se
 <br />
 
 ---
-## [Microsoft Defender for Cloud] Configuration
+## Setting up Microsoft Defender for Cloud
 
 <br />
 Next, we’ll enable log collection from the virtual machine into the Log Analytics workspace.
