@@ -279,7 +279,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 
 
 
-18
+ - Enter the VM admin credentials you created during the VM deployment.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/ZalwypN.png">
@@ -290,7 +290,7 @@ Now we’ll connect the Log Analytics workspace to our VM.
 
 
 
-19
+ - Once you login to your VM, open [Event Viewer]
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/8PkX9Sa.png">
@@ -299,10 +299,14 @@ Now we’ll connect the Log Analytics workspace to our VM.
 <br />
 <br />
 
+---
+## Windows Event Viewer and Logon Failure
 
+<br />
+<br />
 
-
-20
+ - Go to [Windows Logs] > [Security].
+ - The top pane displays all security events with timestamps and event IDs. The bottom pane shows detailed information about each selected event.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/BduPEjy.png">
@@ -312,8 +316,8 @@ Now we’ll connect the Log Analytics workspace to our VM.
 <br />
 
 
-
-21
+ - Let's experiment: Pretend you are an attacker attempting to brute-force the VM's login credential.
+ - Try logging in to the VM (while the VM is running) using RDP with an invalid account name and password.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/yxV6dLt.png">
@@ -323,7 +327,13 @@ Now we’ll connect the Log Analytics workspace to our VM.
 <br />
 
 
-22
+ - You will immediately see new Logon failure security event log.
+You can double-click the event to see the detail:
+    - Account Name: SoelFailureExample
+    - Failure Reason: Unknown
+    - username or bad password.
+    - Workstation name: YourDesktopName
+    - Source Network Address: YourIPaddress
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/Yl4AdyH.png">
@@ -334,7 +344,14 @@ Now we’ll connect the Log Analytics workspace to our VM.
 
 
 
-23
+ - From the previous example, you saw that when attackers try to access our VM, their IP addresses are recorded in the Windows event log, viewable in the Event Viewer.
+We'll now use these IP addresses to:
+    - Retrieve geographic information (latitude, longitude, city, state, and country) using PowerShell and a third-party API (ipgeolocation.io).
+    - Create a custom log with this geographic data on our VM.
+    - Send these custom logs to the Azure Log Analytics workspace.
+    - Use Azure Sentinel (SIEM) to ingest the logs and plot the attackers' locations on a map.
+ - This process allows us to visualize the geographic origin of attempted intrusions.
+
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/SUmUxE0.png">
@@ -342,15 +359,31 @@ Now we’ll connect the Log Analytics workspace to our VM.
 <br />
 <br />
 <br />
+ 
+ *Example from ipgeolocation.io*
+
+---
+## Configuring VM for Network Exposure
 
 
+ - We'll disable the firewall on our VM to make it responsive to ICMP echo requests, increasing its visibility on the Internet.
+ - visibility on the Internet.
+On your host machine (not the VM), open Command Prompt.
+Start a continuous ping to your VM:
+```ping x.x.x.x -t```
+*(Replace x.x.x.x with your VM's IP address. The -t flag enables continuous pinging.)*
 
-24
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/9NePZMJ.png">
 <br />
 <br />
+
+ - You'll see 'Request timed out' messages.
+ - Next, we'll disable the VM's firewall. While we could allow ICMP traffic specifically, we'll turn off the entire firewall for this honeypot setup.
+    - *Note: Disabling the firewall increases security risks. Only do this in a controlled environment for specific testing purposes.*
+
+ 
 <br />
 <br />
 
