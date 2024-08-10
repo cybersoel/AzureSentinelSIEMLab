@@ -347,7 +347,6 @@ You can double-click the event to see the detail:
  - From the previous example, you saw that when attackers try to access our VM, their IP addresses are recorded in the Windows event log, viewable in the Event Viewer.
 We'll now use these IP addresses to:
 
-<br />
 
     - Retrieve geographic information (latitude, longitude, city, state, and country) using PowerShell and a third-party API (ipgeolocation.io).
     - Create a custom log with this geographic data on our VM.
@@ -379,7 +378,9 @@ We'll now use these IP addresses to:
  - We'll disable the firewall on our VM to make it responsive to ICMP echo requests, increasing its visibility on the Internet.
  - On your host machine (not the VM), open Command Prompt. Start a continuous ping to your VM:
 
-```ping x.x.x.x -t```
+```
+ping x.x.x.x -t
+```
 
  - *(Replace x.x.x.x with your VM's IP address. The -t flag enables continuous pinging.)*
 
