@@ -42,7 +42,7 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 <br />
 <br />
 
-- Under the [Resource Group] drop-down menu, click [Create New]. Create a new resource group named “HoneypotLab.”
+ - Under the [Resource Group] drop-down menu, click [Create New]. Create a new resource group named “HoneypotLab.”
 
 <p align="center">
 <br/>
@@ -54,9 +54,9 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 
 
 
-- We will name the virtual machine "honeypot-vm"
-- Choose your region ("US East" in my case)
-- Choose ISO (Select the most recent Windows server)
+ - We will name the virtual machine "honeypot-vm"
+ - Choose your region ("US East" in my case)
+ - Choose ISO (Select the most recent Windows server)
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/xwJoMOT.png">
@@ -69,8 +69,8 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 
 
 
-- Keep the size at the default setting (2 vCPUs, 8 GiB memory).
-- Create an admin account for this VM (in this lab, username: soeladmin, password: Cyberlab!123)
+ - Keep the size at the default setting (2 vCPUs, 8 GiB memory).
+ - Create an admin account for this VM (in this lab, username: soeladmin, password: Cyberlab!123)
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/NLPUrkH.png">
@@ -81,8 +81,8 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 
 
 
-- For the Network Interface option, create a new virtual network named “honeypot-vm-vnet” and use the default settings. Choose the default subnet with the range 10.0.0.0/24. Name the new Public IP “honeypot-vm-ip.”
-- Select [Advanced] for the NIC network security group, and create a new network security group called “honeypot-vm-nsg.”
+ - For the Network Interface option, create a new virtual network named “honeypot-vm-vnet” and use the default settings. Choose the default subnet with the range 10.0.0.0/24. Name the new Public IP “honeypot-vm-ip.”
+ - Select [Advanced] for the NIC network security group, and create a new network security group called “honeypot-vm-nsg.”
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/9cUJ96u.png">
@@ -92,7 +92,7 @@ Browse to the Microsoft Azure Portal and sign up for a free trial. After logging
 <br />
 
 
-- We can add a firewall rule for this network security group. To do so, delete the default inbound rule and create a new one.
+ - We can add a firewall rule for this network security group. To do so, delete the default inbound rule and create a new one.
 Click Add an inbound rule. Configure like below:
     - Source: Any
     - Source port ranges: * (asterisk means any port)
@@ -118,7 +118,7 @@ Click Add an inbound rule. Configure like below:
 
 
 
-- After completing the network settings, proceed to the review section and create the VM.
+ - After completing the network settings, proceed to the review section and create the VM.
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/uDEovSk.png">
@@ -130,7 +130,16 @@ Click Add an inbound rule. Configure like below:
 ---
 ## Creating Log Analytics Workspace
 
-8
+<br />
+Return to the Azure portal main page and select the [Log Analytics Workspace] service. This service will be used to ingest logs from the virtual machine. Click on [Create]
+<br />
+<br />
+<br />
+<br />
+
+
+ - Choose the resource group "HoneypotLab" we previously created. Let's also name our Log Analytics workspace "law-honeypot."
+ - Pick the region wherever you picked previously (EAST US in this lab)
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/4qRk5sy.png">
@@ -140,7 +149,7 @@ Click Add an inbound rule. Configure like below:
 <br />
 
 
-9
+ - Review and create!
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/5H6SQMy.png">
@@ -149,9 +158,19 @@ Click Add an inbound rule. Configure like below:
 <br />
 <br />
 
+---
+## [Microsoft Defend for Cloud] Configuration
+
+<br />
+Next, we’ll enable log collection from the virtual machine into the Log Analytics workspace.
+<br />
+<br />
+<br />
+<br />
 
 
-10
+
+ - Navigate to [Microsoft Defender for Cloud] > [Environment Settings], then select the “law-honeypot” workspace.
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/rlNzDcg.png">
@@ -161,7 +180,7 @@ Click Add an inbound rule. Configure like below:
 <br />
 
 
-11
+ - Disable SQL Servers since we won’t be using them. Enable the other options: [Foundational CSPM] and [Servers].
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/Awp0c1a.png">
@@ -172,7 +191,8 @@ Click Add an inbound rule. Configure like below:
 
 
 
-12
+ - Navigate to [Settings] > [Data Collection] Pick [All Events]
+Click on [Save]
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/561BAUr.png">
@@ -181,8 +201,19 @@ Click Add an inbound rule. Configure like below:
 <br />
 <br />
 
+---
+## VM and Log Analytics intergration
 
-13
+<br />
+Now we’ll connect the Log Analytics workspace to our VM.
+<br />
+<br />
+<br />
+<br />
+
+
+ -  Go to [Log Analytics workspace] and select “law-honeypot.”
+ -  Then, within the [Log Analytics workspace], navigate to [Virtual Machines] and choose “honeypot-vm.”
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/lWtMh6T.png">
@@ -192,7 +223,7 @@ Click Add an inbound rule. Configure like below:
 <br />
 
 
-14
+ - Click on [Connect]
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/j2UwHtS.png">
@@ -201,8 +232,16 @@ Click Add an inbound rule. Configure like below:
 <br />
 <br />
 
+---
+## Log Analytics and Microsoft Sentinel (SIEM) integration
 
-15
+<br />
+<br />
+<br />
+<br />
+
+ - Navigate to [Microsoft Sentinel] and click on [Create Microsoft Sentinel]
+           - *Microsoft Sentinel will serve as our SIEM for visualizing the attack data.*
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/3W4vqmD.png">
@@ -215,7 +254,8 @@ Click Add an inbound rule. Configure like below:
 
 
 
-16
+ - Select our Log Analytics workspace "law-honeypot"
+ - Click on [Add]
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/FwePCmd.png">
@@ -223,6 +263,9 @@ Click Add an inbound rule. Configure like below:
 <br />
 <br />
 <br />
+
+---
+## Running the VM via RDP
 
 
 17
