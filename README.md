@@ -521,7 +521,9 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-
+<br />
+<br />
+<br />
 
 
 
@@ -537,7 +539,9 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-
+<br />
+<br />
+<br />
 
 
 
@@ -553,9 +557,13 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
+<br />
+<br />
+<br />
 
-
-33
+ - The `write-Sample-Log()` function generates multiple sample log entries and appends them to our log file, `failed_rdp.log`
+ - The purpose of creating these sample logs is to provide data for training the [Extract] feature in [Log Analytics Workspace].
+     - *Without enough sample log entries, [Log Analytics Workspace] may fail to extract specific fields accurately.*
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/H6VGmUp.png">
@@ -563,9 +571,13 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
+<br />
+<br />
+<br />
 
-
-34
+ - *You need to know how the PowerShell pipeline logic works to understand this function.*
+ - The sample log string flows through the pipeline, and the `Out-File` cmdlet directs it to the file specified by `$LOGFILE_PATH` and appends the string using UTF-8 encoding.
+     - *We will prevent our SIEM from mapping these sample records in the future by creating a filter that excludes all log entries with a destination host of the "samplehost" Don't worry about it now!*
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/44drQRG.png">
@@ -573,9 +585,11 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
+<br />
+<br />
+<br />
 
-
-35
+ - This block of code will create the log file (with our sample log in it) if it doesn’t already exist. 
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/uFrcpi9.png">
@@ -583,10 +597,17 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
+<br />
+<br />
+<br />
 
 
-
-36
+ - This code creates a loop that runs forever, checking for new events every second. Here's what it does:
+     - It uses `Get-WinEvent` to look at Windows Event logs.
+     - It only pulls out failed login events (`EventID` 4625). We told it which events to look for using the XML filter we made earlier.
+     - If it can't find any failed login events, it doesn't show an error message. Instead, it just keeps running. This is what `-ErrorAction SilentlyContinue` does.
+     -  All the failed login events it finds are stored in the `$events` variable.
+     -  The loop keeps running because of `while($true)`. This means "keep going forever".
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/3PoZXOU.png">
@@ -594,7 +615,9 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-
+<br />
+<br />
+<br />
 
 
 37
@@ -605,7 +628,9 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-
+<br />
+<br />
+<br />
 
 
 
@@ -617,7 +642,9 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-
+<br />
+<br />
+<br />
 
 
 39
@@ -628,7 +655,9 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-
+<br />
+<br />
+<br />
 
 
 40
