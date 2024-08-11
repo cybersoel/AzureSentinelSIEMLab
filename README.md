@@ -618,7 +618,10 @@ We will go over the script code by code to understand it.
 <br />
 
 
-37
+ - This code goes through each event stored in `$events` one at a time. For each event:
+     - It looks at the 20th item (index 19) in the event's properties list. This item contains the source IP address of the failed login attempt.
+     - It then checks if this IP address exists and isn't empty. We do this by seeing if the length of the IP address is at least 5 characters long. (The number 5 is just chosen as a simple way to check if there's actual content there.)
+     - If there is an IP address present, the code inside the if-statement will run.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/sX3O6Rv.png">
@@ -632,7 +635,10 @@ We will go over the script code by code to understand it.
 
 
 
-38
+ - This code takes information from the failed login event (`EventID` 4625) and turns it into a custom log entry. Here's what it does:
+     - 1) It gets the time the event happened and breaks it into parts like year, month, day, hour, minute, and second.
+     - 2) If the month, hour, or minute is a single digit, it adds a "0" in front. This keeps the format consistent.
+     - 3) It also gets the event ID, username, source computer name, and source IP address from the event.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/RIZKG6W.png">
@@ -645,7 +651,8 @@ We will go over the script code by code to understand it.
 <br />
 
 
-39
+ - 4) Then, it uses the `Invoke-WebRequest` cmdlet to send the source IP address to a website (ipgeolocation.io). This website gives back information about where the IP address is located.
+ - 5) It takes the location information from the website's response and saves it in variables.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/yNoCRj1.png">
@@ -658,18 +665,12 @@ We will go over the script code by code to understand it.
 <br />
 
 
-40
+ - 6) Finally, it takes all this information - the time, event details, and location data - and writes it into our custom log file. 
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/408IaAj.png">
 <br />
-<br />
-<br />
-<br />
 
-
-
-41
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/BarSrWg.png">
@@ -679,9 +680,13 @@ We will go over the script code by code to understand it.
 <br />
 
 
+---
+## Running the script
 
 
-42
+
+ - As soon as you run the script, it will start to collect failed logon events with geographic data in a custom log format. We are already getting attacks from all over the world.(Russia, Angola, Sri Lanka, UK, etc..)
+ - If you don’t see anything, it just means your VM has not been discovered by attackers yet. Check if the script is working by going to the RDP connection and intentionally entering the wrong logon credentials. 
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/YH6vFhk.png">
@@ -690,7 +695,8 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 
-
+---
+##  feeding logs to [Log Analytics Workspace]
 
 
 43
