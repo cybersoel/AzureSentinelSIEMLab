@@ -27,7 +27,7 @@
 - [Running the VM via RDP](#running-the-vm-via-rdp)
 - [Windows Event Viewer and Logon Failure](#windows-event-viewer-and-logon-failure)
 - [Configuring VM for Network Exposure](#configuring-vm-for-network-exposure)
-- [Automation: PowerShell script: Custom Security Log Exporter](#automation-powershell-script-custom-security-log-exporter)
+- [PowerShell script: Custom Security Log Exporter](#powershell-script-custom-security-log-exporter)
 - [](#)
 
 ---
