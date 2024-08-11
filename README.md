@@ -472,13 +472,13 @@ ping x.x.x.x -t
 ---
 
 [back to top](#toc)
-## Automation: PowerShell script: Custom Security Log Exporter
+## PowerShell script: Custom Security Log Exporter
 
 <br />
 <br />
 <br />
 
- - Open the PowerShell script from Windows PowerShell ISE (admin)
+ - Run [Windows PowerShell ISE] as Administrator, then open the PowerShell script.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/Sm44YT6.png">
@@ -489,7 +489,8 @@ ping x.x.x.x -t
 
 
 
-29
+ - The purpose of this script is to extract failed logon events from the Windows event log perpetually, send them to ipgeolocation.io, retrieve geographic information, and store it in a custom log file.
+ - We will later register this custom log file in the Log Analytics Workspace.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/6H8KrTW.png">
@@ -498,8 +499,21 @@ ping x.x.x.x -t
 <br />
 <br />
 
+---
+## code breakdown
 
-30
+<br />
+
+We will go over the script code by code to understand it.
+
+<br />
+<br />
+<br />
+
+ - We're setting up three important pieces of information:
+    - `$API_KEY`: This is a special code you get from ipgeolocation.io. You need to sign up on their website to get this key. It's like a password that lets you use their service.
+    - `$LOGFILE_NAME`: This is the name we're giving to our custom log file. You can choose any name you want for this.
+    - `$LOGFILE_PATH`: This tells the computer where to save our log file. It includes the full path to the file's location on your computer.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/CBYSoOR.png">
@@ -512,7 +526,10 @@ ping x.x.x.x -t
 
 
 
-31
+ - We're creating a special filter called `$XMLFilter`. This filter helps us find specific events in the Windows Event Log. Here's what you need to know:
+     - The filter is written in XML, which is a way to organize data.
+     - We use something called "here-strings" (marked by @' '@) to write the XML. This lets us write multiple lines of text easily, including quotation marks.
+     - Our filter is set up to find events with ID 4625. These are failed login attempts.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/SJFFAiX.png">
@@ -523,7 +540,12 @@ ping x.x.x.x -t
 
 
 
-32
+
+ - Optional) To make your own filters:
+     - Open the Windows Event Viewer on your computer.
+     - Click on any event you're interested in.
+     - Look at the "Details" tab and switch to "XML View".
+     - This shows you the XML structure for that event, which you can use to build your own filters.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/bhHMHlE.png">
