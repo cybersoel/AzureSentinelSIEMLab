@@ -489,8 +489,7 @@ ping x.x.x.x -t
 
 
 
- - The purpose of this script is to extract failed logon events from the Windows event log perpetually, send them to ipgeolocation.io, retrieve geographic information, and store it in a custom log file.
- - We will later register this custom log file in the Log Analytics Workspace.
+ - The purpose of this script is to extract failed logon events from the Windows event log perpetually, send them to ipgeolocation.io, retrieve geographic information, and store it in a custom log file. We will later register this custom log file in the Log Analytics Workspace.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/6H8KrTW.png">
