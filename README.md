@@ -561,7 +561,7 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 
- - The `write-Sample-Log()` function generates multiple sample log entries and appends them to our log file, `failed_rdp.log`
+ - The newly defined `write-Sample-Log()` function generates multiple sample log entries and appends them to our log file, `failed_rdp.log`
  - The purpose of creating these sample logs is to provide data for training the [Extract] feature in [Log Analytics Workspace].
      - *Without enough sample log entries, [Log Analytics Workspace] may fail to extract specific fields accurately.*
 <p align="center">
