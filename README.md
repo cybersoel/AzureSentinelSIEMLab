@@ -574,7 +574,6 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 
- - *You need to know how the PowerShell pipeline logic works to understand this function.*
  - The sample log string flows through the pipeline, and the `Out-File` cmdlet directs it to the file specified by `$LOGFILE_PATH` and appends the string using UTF-8 encoding.
      - *We will prevent our SIEM from mapping these sample records in the future by creating a filter that excludes all log entries with a destination host of the "samplehost" Don't worry about it now!*
 <p align="center">
