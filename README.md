@@ -481,7 +481,7 @@ ping x.x.x.x -t
  - Run [Windows PowerShell ISE] as Administrator, then open the PowerShell script.
 <p align="center">
 <br/>
-<img width="672" alt="Portfolio" src="https://i.imgur.com/Sm44YT6.png">
+<img width="500" alt="Portfolio" src="https://i.imgur.com/Sm44YT6.png">
 <br />
 <br />
 <br />
