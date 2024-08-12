@@ -686,7 +686,8 @@ We will go over the script code by code to understand it.
 
 
  - As soon as you run the script, it will start to collect failed logon events with geographic data in a custom log format. We are already getting attacks from all over the world.(Russia, Angola, Sri Lanka, UK, etc..)
- - If you don’t see anything, it just means your VM has not been discovered by attackers yet. Check if the script is working by going to the RDP connection and intentionally entering the wrong logon credentials. 
+ - If you don’t see anything, it just means your VM has not been discovered by attackers yet. Check if the script is working by going to the RDP connection and intentionally entering the wrong logon credentials.
+ - Make sure to let the script running!
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/YH6vFhk.png">
@@ -869,9 +870,15 @@ FAILED_RDP_WITH_GEO_CL
      - We are excluding previously inserted sample logs (by excluding "samplehost")
      - We are also excluding any events without an IP address and creating a field called event_count, which is the number of failed logon events from the same attacker.
 
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
-56
+ - Test the script to see if it works. Now, we can see separate fields are created!
+ - [Save] the script.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/EXJig5P.png">
@@ -880,8 +887,15 @@ FAILED_RDP_WITH_GEO_CL
 <br />
 <br />
 
+---
+## SIEM Dashboard Configuration
 
-57
+<br />
+<br />
+<br />
+
+
+ - Navigate to [Microsoft Sentinel] > [Overview]. We already can see a lot of attempted RDP attacks. 
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/l7DWZPi.png">
@@ -891,7 +905,7 @@ FAILED_RDP_WITH_GEO_CL
 <br />
 
 
-58
+ - Select [Threat Management] > [Workbooks] > [Add Workbook]
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/OcRtJ01.png">
@@ -902,7 +916,7 @@ FAILED_RDP_WITH_GEO_CL
 
 
 
-59
+ - Click [Edit] and delete all the existing default widgets
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/0d9kzPK.png">
@@ -912,7 +926,8 @@ FAILED_RDP_WITH_GEO_CL
 <br />
 
 
-60
+ - Select [Add] > [Add query]. Import the saved query from Log Analytics Workspace.
+     - *If you didn't save the query, you can just copy & paste the script to the new workbook.*
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/obqAUFi.png">
@@ -923,7 +938,7 @@ FAILED_RDP_WITH_GEO_CL
 
 
 
-61
+ - Run the Query.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/AaMTmB7.png">
@@ -933,8 +948,7 @@ FAILED_RDP_WITH_GEO_CL
 <br />
 
 
-
-62
+ - Let's add a map. Select [Visualization] > [Map]
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/PKrPZCp.png">
@@ -945,28 +959,22 @@ FAILED_RDP_WITH_GEO_CL
 
 
 
-63
+ - Configure the [Map Settings] like below:
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/JmUbj1V.png">
 <br />
-<br />
-<br />
-<br />
 
-
-64
 <p align="center">
 <br/>
-<img width="672" alt="Portfolio" src="https://i.imgur.com/Zg5ElR2.png">
+<img width="540" alt="Portfolio" src="https://i.imgur.com/Zg5ElR2.png">
 <br />
 <br />
 <br />
 <br />
 
 
-
-65
+ - Once you are done with the map setting, save the workbook.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/iDJPrdo.png">
@@ -977,7 +985,8 @@ FAILED_RDP_WITH_GEO_CL
 
 
 
-66
+ - Our dashboard now displays a world map visualizing the RDP attack origins!
+ - Set up auto-refresh to monitor attacks in real-time.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/t60dHRV.png">
@@ -987,7 +996,7 @@ FAILED_RDP_WITH_GEO_CL
 <br />
 
 
-67
+ - Remember, your VM's PowerShell script must be running for Log Analytics Workspace to collect and display the geographic data in the custom log.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/WYFf3E3.png">
@@ -998,17 +1007,34 @@ FAILED_RDP_WITH_GEO_CL
 
 
 
-68
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/Vqwbpr5.png">
 <br />
+
+After running the script for 7 hours, I found:
+
+<br />
+
+```
+3k attacks from Indonesia
+2.98k from Angola
+2.8k from Kyrgyzstan
+2.37k from Russia
+1.41k from Sri Lanka
+1.2k from the United Kingdom
+1.19k from Saudi Arabia
+227 from India
+180 from the United States
+```
+<br />
+<br />
+<br />
 <br />
 <br />
 <br />
 
-
-69
+ - Key Insight: "Administrator" was the most commonly targeted username in brute-force attempts. Using unique, non-generic usernames can significantly reduce your vulnerability to these attacks :)
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/byxOXS6.png">
@@ -1016,8 +1042,6 @@ FAILED_RDP_WITH_GEO_CL
 <br />
 <br />
 <br />
-
-
 
 
 
