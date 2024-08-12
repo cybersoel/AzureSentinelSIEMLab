@@ -696,10 +696,11 @@ We will go over the script code by code to understand it.
 <br />
 
 ---
-##  feeding logs to [Log Analytics Workspace]
+##  Import the custom logs to [Log Analytics Workspace]
 
 
-43
+ - Go to [Log Analytics Workspace] > [law-honeypot] > [Tables].
+ - Click [Create] > [New Custom log (MMA-based)]
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/gxKSpKn.png">
@@ -710,7 +711,8 @@ We will go over the script code by code to understand it.
 
 
 
-44
+ - To use our sample log in Log Analytics Workspace, we need to move it from the virtual machine to our main computer.
+ - Copy the log file's content from the VM, paste it into a new text file on your main computer, and save it. Then open it from [Log Analytics Workspace].
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/njOcNNU.png">
@@ -722,7 +724,7 @@ We will go over the script code by code to understand it.
 
 
 
-45
+ - Check if the information is correct. Click [Next]
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/dm4peR2.png">
@@ -733,7 +735,7 @@ We will go over the script code by code to understand it.
 
 
 
-46
+ - Enter the collection paths. Type the path of the custom log file in our VM. (not in the host machine!)
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/ypjexuQ.png">
@@ -745,7 +747,7 @@ We will go over the script code by code to understand it.
 
 
 
-47
+ - We will name the custom log `FAILED_RDP_WITH_GEO` This will get the extension of _CL (custom log) automatically. Click [Next]
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/CAO3Dzu.png">
@@ -756,7 +758,7 @@ We will go over the script code by code to understand it.
 
 
 
-48
+ - Click [Create]
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/PqA2yuN.png">
@@ -768,7 +770,7 @@ We will go over the script code by code to understand it.
 
 
 
-49
+ - Though the custom log will be created immediately, it will take a while for [Log Analytics Workspace] to sync up with the VM and bring the customer log into the [Log Analytics Workspace].
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/tQqcA7U.png">
@@ -780,7 +782,8 @@ We will go over the script code by code to understand it.
 
 
 
-50
+ - To check if it's ready, go to the [Logs] section in [Log Analytics Workspace] and type `FAILED_RDP_WITH_GEO_CL` (name of the custom log we just created), then run this query.
+ - If you don't see any results, Log Analytics Workspace is still working on syncing the data. This process can take a little while, so you may need to wait and check again later.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/ZNwh1OJ.png">
@@ -792,7 +795,8 @@ We will go over the script code by code to understand it.
 
 
 
-51
+ - Let's experiment with the KQL (Kusto Query Language) query.
+ - Type `SecurityEvent | where EventID == 4625` to view failed logon events (ID 4625) from the VM's Windows event log. Note that these are raw events without the added geographic data from our custom log.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/XlKcX1A.png">
@@ -803,7 +807,7 @@ We will go over the script code by code to understand it.
 
 
 
-52
+ - We can still see some details by clicking the events individually.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/Cfqdkaf.png">
@@ -814,7 +818,8 @@ We will go over the script code by code to understand it.
 
 
 
-53
+ - Wait 10-15 mins until syncing is complete. Check if the Syncing is complete by typing 'FAILED_RDP_WITH_GEO_CL` again.
+ - Now, we should see the imported custom logs. 
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/4JHmthk.png">
@@ -825,7 +830,7 @@ We will go over the script code by code to understand it.
 
 
 
-54
+ - You'll see all data is in one field called [RawData]. Let's create separate custom fields for each piece of information using a simple KQL script.
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/J0pvZ3H.png">
@@ -834,15 +839,35 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 
+---
+## Structuring Data with KQL: From Raw to Refined
 
-55
+<br />
+<br />
+<br />
+
+ - Below is the KQL script we are going to use:
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/4wHB5i3.png">
 <br />
+
+You can copy & paste this script in your query box.
+
+```
+FAILED_RDP_WITH_GEO_CL
+| parse RawData with * "latitude:" Latitude ",longitude:" Longitude ",destinationhost:" DestinationHost ",username:" Username ",sourcehost:" Sourcehost ",state:" State ", country:" Country ",label:" Label ",timestamp:" Timestamp 
+| where DestinationHost != "samplehost" 
+| where Sourcehost != "" 
+| summarize event_count=count() by Sourcehost, Latitude, Longitude, Country, Label, DestinationHost
+```
+
 <br />
-<br />
-<br />
+
+ - Script explanation:
+     - We are extracting specified data from RawData and making it into custom fields.
+     - We are excluding previously inserted sample logs (by excluding "samplehost")
+     - We are also excluding any events without an IP address and creating a field called event_count, which is the number of failed logon events from the same attacker.
 
 
 
