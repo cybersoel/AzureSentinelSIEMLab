@@ -520,9 +520,7 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
 
 
 
@@ -538,9 +536,7 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
 
 
 
@@ -556,9 +552,7 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
 
  - The newly defined `write-Sample-Log()` function generates multiple sample log entries and appends them to our log file, `failed_rdp.log`
  - The purpose of creating these sample logs is to provide data for training the [Extract] feature in [Log Analytics Workspace].
@@ -570,9 +564,7 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
 
  - The sample log string flows through the pipeline, and the `Out-File` cmdlet directs it to the file specified by `$LOGFILE_PATH` and appends the string using UTF-8 encoding.
      - *We will prevent our SIEM from mapping these sample records in the future by creating a filter that excludes all log entries with a destination host of the "samplehost" Don't worry about it now!*
@@ -583,16 +575,12 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
 
  - This block of code will create the log file (with our sample log in it) if it doesn’t already exist. 
 <p align="center">
 <br/>
 <img width="672" alt="Portfolio" src="https://i.imgur.com/uFrcpi9.png">
-<br />
-<br />
 <br />
 <br />
 <br />
@@ -613,9 +601,7 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
 
 
  - This code goes through each event stored in `$events` one at a time. For each event:
@@ -629,9 +615,7 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
 
 
 
@@ -646,9 +630,7 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
 
  - *continue*
      - Then, it uses the `Invoke-WebRequest` cmdlet to send the source IP address to a website (ipgeolocation.io). This website gives back information about where the IP address is located.
@@ -660,9 +642,7 @@ We will go over the script code by code to understand it.
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
 
  - *continue*
      - Finally, it takes all this information - the time, event details, and location data - and writes it into our custom log file. 
@@ -951,7 +931,7 @@ FAILED_RDP_WITH_GEO_CL
  - Let's add a map. Select [Visualization] > [Map]
 <p align="center">
 <br/>
-<img width="672" alt="Portfolio" src="https://i.imgur.com/PKrPZCp.png">
+<img width="450" alt="Portfolio" src="https://i.imgur.com/PKrPZCp.png">
 <br />
 <br />
 <br />
