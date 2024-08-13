@@ -502,6 +502,7 @@ ping x.x.x.x -t
 <br />
 
 ---
+[back to top](#toc)
 ## code breakdown
 
 <br />
@@ -664,6 +665,7 @@ We will go over the script code by code to understand it.
 
 
 ---
+[back to top](#toc)
 ## Running the script
 
 
@@ -680,6 +682,7 @@ We will go over the script code by code to understand it.
 <br />
 
 ---
+[back to top](#toc)
 ##  Import the custom logs to [Log Analytics Workspace]
 
 
@@ -824,6 +827,7 @@ We will go over the script code by code to understand it.
 <br />
 
 ---
+[back to top](#toc)
 ## Structuring Data with KQL: From Raw to Refined
 
 <br />
@@ -871,6 +875,7 @@ FAILED_RDP_WITH_GEO_CL
 <br />
 
 ---
+[back to top](#toc)
 ## SIEM Dashboard Configuration
 
 <br />
