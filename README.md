@@ -28,6 +28,7 @@
 - [Windows Event Viewer and Logon Failure](#windows-event-viewer-and-logon-failure)
 - [Configuring VM for Network Exposure](#configuring-vm-for-network-exposure)
 - [PowerShell script: Custom Security Log Exporter](#powershell-script-custom-security-log-exporter)
+- [code breakdown](#code-breakdown)
 - [Running the script](#running-the-script)
 - [Import the custom logs to \[Log Analytics Workspace\]](#import-the-custom-logs-to-log-analytics-workspace)
 - [Structuring Data with KQL: From Raw to Refined](#structuring-data-with-kql-from-raw-to-refined)
