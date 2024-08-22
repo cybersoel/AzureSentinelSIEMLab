@@ -1,3 +1,21 @@
+# Azure Sentinel SIEM: Real-time RDP Attack Analysis
+
+## Key Learnings and Skills Demonstrated
+
+- **Cloud Infrastructure Setup**: Demonstrated proficiency in configuring Azure virtual machines and associated networking components for a honeypot environment.
+- **Security Information and Event Management (SIEM)**: Gained hands-on experience with Azure Sentinel, setting up a SIEM solution to collect, analyze, and visualize security event data.
+- **Log Analytics**: Utilized Azure Log Analytics to ingest, process, and query large volumes of log data from the honeypot VM.
+- **PowerShell Scripting**: Developed a custom PowerShell script to continuously monitor Windows Event logs, extract relevant information, and enrich it with geolocation data.
+- **API Integration**: Integrated a third-party API (ipgeolocation.io) to obtain geographic information for IP addresses, demonstrating the ability to work with external data sources.
+- **Custom Log Creation**: Created and configured custom log solutions in Azure Log Analytics to ingest and process the enriched security event data.
+- **KQL (Kusto Query Language)**: Wrote and optimized KQL queries to parse, filter, and analyze log data effectively.
+- **Data Visualization**: Designed an interactive dashboard in Azure Sentinel to display global attack patterns, showcasing data presentation skills.
+- **Network Security**: Configured and managed network security groups and firewall settings to create a purposefully vulnerable environment for the honeypot.
+- **Windows Server Administration**: Demonstrated skills in configuring and managing a Windows Server environment, including event log management and remote desktop services.
+- **Cybersecurity Analysis**: Analyzed attack patterns, identified common attack vectors, and drew insights from the collected data, showcasing analytical and critical thinking skills in a cybersecurity context.
+
+This project simulates a real-world scenario of monitoring and analyzing cyber attacks, providing hands-on experience with cloud-based security tools and practices. The skills demonstrated are directly applicable to roles in cybersecurity, particularly in areas of threat detection, incident response, and security operations.
+
 <h1 align="center">Summary Diagram</h1>
 
 
