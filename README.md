@@ -16,6 +16,8 @@
 
 This project simulates a real-world scenario of monitoring and analyzing cyber attacks, providing hands-on experience with cloud-based security tools and practices. The skills demonstrated are directly applicable to roles in cybersecurity, particularly in areas of threat detection, incident response, and security operations.
 
+Credit to: YT [Josh Madakor](https://www.youtube.com/@JoshMadakor)
+
 <h1 align="center">Summary Diagram</h1>
 
 
